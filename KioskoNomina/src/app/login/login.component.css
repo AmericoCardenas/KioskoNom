@@ -1,0 +1,17 @@
+mat-card{
+    background-color:white !important;
+    color:black !important;
+}
+
+input{
+    color:black !important;
+}
+
+mat-label {
+  color: black !important;
+}
+
+
+.btnlogin{
+    background-color:dodgerblue !important;
+}

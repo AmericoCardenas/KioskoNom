@@ -1,0 +1,101 @@
+<div id="MyDIv" #MyDIv>
+  <mat-grid-list cols="4" rowHeight="3:1">
+    <mat-grid-tile>
+      <mat-form-field color="primary">
+        <mat-label>Fecha Inicial</mat-label>
+        <input matInput [matDatepicker]="picker" name="fechainicial" [(ngModel)]="fechainicial">
+        <mat-datepicker-toggle matIconSuffix [for]="picker" class="dodgerblue-icon"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-form-field color="primary">
+        <mat-label>Fecha Inicial</mat-label>
+        <input matInput [matDatepicker]="picker2" name="fechafinal" [(ngModel)]="fechafinal">
+        <mat-datepicker-toggle matIconSuffix [for]="picker2" class="dodgerblue-icon"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </mat-grid-tile>
+
+
+    <mat-grid-tile>
+      <button type="button" class="button" mat-raised-button color="primary" (click)="OnFechaAccept()">Aceptar</button>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <button type="button" class="button-red" mat-raised-button color="primary" (click)="SavePDF()">PDF</button>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  <mat-grid-list cols="2" rowHeight="25px">
+    <div *ngFor="let t of list_trabajador">
+      <mat-grid-tile>
+        <span class="span">Empleado: {{t.nombreCompleto}}</span>
+        <input type="hidden" id="empleado" name="empleado" value={{t.nombreCompleto}}>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <span class="span">Puesto: {{t.puesto}}</span>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+
+  <table hidden [dataSource]="list_trabajador" mat-table class="mat-elevation-z8 demo-table" id="tb_empleado">
+
+    <ng-container matColumnDef="Nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let t"> {{t.nombreCompleto}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Puesto">
+      <th mat-header-cell *matHeaderCellDef> Puesto </th>
+      <td mat-cell *matCellDef="let t"> {{t.puesto}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['Nombre','Puesto']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['Nombre','Puesto'];"></tr>
+  </table>
+
+
+  <div class="overflow">
+
+    <mat-card>
+      <mat-card-title style="color:black!important;text-align:center!important;">Resumen</mat-card-title>
+      <mat-card-content>
+        <app-nomgen [nomgenList]="list_nomgen"></app-nomgen>
+      </mat-card-content>
+    </mat-card>
+
+
+    <mat-card>
+      <mat-card-title style="color:black!important;text-align:center!important;">Servicios</mat-card-title>
+      <mat-card-content>
+        <app-servicios [serviciosList]="list_servicios"></app-servicios>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title style="color:black!important;text-align:center!important;">Tickets</mat-card-title>
+      <mat-card-content>
+        <app-tickets [ticketsList]="list_tickets"></app-tickets>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title style="color:black!important;text-align:center!important;">Bonos</mat-card-title>
+      <mat-card-content>
+        <app-bonos [bonosList]="list_bonos"></app-bonos>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title style="color:black!important;text-align:center!important;">Deducciones</mat-card-title>
+      <mat-card-content>
+        <app-deducciones [deduccionesList]="list_deducciones"></app-deducciones>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>

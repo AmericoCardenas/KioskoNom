@@ -1,0 +1,105 @@
+table {
+  width: 100%!important;
+}
+
+.mat-column-idNomCheckin {
+  width: 50px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-totServ {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-totSencillos {
+  width: 70px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-totRedondos {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-totTaxis {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-totEsp {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-idServicioCheckin {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-fservicio {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-cliente {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-ruta {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-turno {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-tipo {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-unidad {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-header-cell {
+  background-color: dodgerblue !important;
+  color: white !important;
+}
+
+.mat-cell {
+  background-color: white !important;
+  color: black !important;
+}

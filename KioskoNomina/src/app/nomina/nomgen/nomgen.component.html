@@ -1,0 +1,56 @@
+<table mat-table [dataSource]="nomgenList" class="mat-elevation-z8 demo-table" id="tb_nomgen">
+
+  <!--<ng-container matColumnDef="idNomCheckin">
+    <th mat-header-cell *matHeaderCellDef>idNomCheckin</th>
+    <td mat-cell *matCellDef="let element">  </td>
+  </ng-container>-->
+
+  <ng-container matColumnDef="totServ">
+    <th mat-header-cell *matHeaderCellDef> totServ </th>
+    <td mat-cell *matCellDef="let element"> {{element.totServ}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totSencillos">
+    <th mat-header-cell *matHeaderCellDef> totSencillos </th>
+    <td mat-cell *matCellDef="let element"> {{element.totSencillos}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totRedondos">
+    <th mat-header-cell *matHeaderCellDef> totRedondos </th>
+    <td mat-cell *matCellDef="let element"> {{element.totRedondos}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totTaxis">
+    <th mat-header-cell *matHeaderCellDef> totTaxis </th>
+    <td mat-cell *matCellDef="let element"> {{element.totTaxis}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totEsp">
+    <th mat-header-cell *matHeaderCellDef> totEsp </th>
+    <td mat-cell *matCellDef="let element"> {{element.totEsp}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="salario">
+    <th mat-header-cell *matHeaderCellDef> salario </th>
+    <td mat-cell *matCellDef="let element"> {{element.salario}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="deducciones">
+    <th mat-header-cell *matHeaderCellDef> deducciones </th>
+    <td mat-cell *matCellDef="let element"> {{element.deducciones}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="bonos">
+    <th mat-header-cell *matHeaderCellDef> bonos </th>
+    <td mat-cell *matCellDef="let element"> {{element.bonos}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="total">
+    <th mat-header-cell *matHeaderCellDef> total </th>
+    <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+

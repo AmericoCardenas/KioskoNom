@@ -1,0 +1,52 @@
+mat-label{
+    color:black !important;
+}
+
+.span{
+    color:black !important;
+    font-weight:bold !important;
+}
+
+.dodgerblue-icon {
+
+  color: dodgerblue !important;
+}
+
+.button {
+    background-color:dodgerblue !important;
+  color: white !important;
+}
+
+.button-red{
+  background-color: red !important;
+  color: white !important;
+}
+  /* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+  .dodgerblue-icon svg {
+    fill: dodgerblue !important;
+  }
+
+  .tb_servicios {
+      text-align:center !important;
+      align-content:center !important;
+  }
+
+  .mat-card{
+      margin:30px !important;
+      background-color:transparent !important;
+      margin-top:-5px !important;
+  }
+
+.overflow {
+  height: 70vh;
+  overflow: auto;
+  margin-top: -5px;
+/*  width: 40vw;
+*//*  height: 60vh;
+/*  margin: auto;
+*/  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

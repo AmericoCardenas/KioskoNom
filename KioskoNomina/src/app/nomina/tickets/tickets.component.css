@@ -1,0 +1,73 @@
+.demo-table {
+  width: 100%;
+}
+
+.mat-column-idTicketCheckin {
+  width: 50px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-unidad {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-litros {
+  width: 70px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-rendReq {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-kmGpsAnt {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-kmGps {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-kmGpsRec {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-column-rendGps {
+  width: 150px;
+  border-right: 1px solid currentColor;
+  text-align: center;
+  border-color: black !important;
+}
+
+.mat-header-cell {
+  background-color: dodgerblue !important;
+  color: white !important;
+}
+
+.mat-cell {
+  background-color: white !important;
+  color: black !important;
+}
+
+
+
