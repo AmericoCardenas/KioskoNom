@@ -1,42 +1,31 @@
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="serviciosList" class="demo-table" id="tb_serv">
+<div class="table-responsive">
+  <table class="table table-bordered table align-middle" id="tb_serv">
+    <thead>
+      <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Ruta</th>
+        <th scope="col">Turno</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Unidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of serviciosList">
 
-    <!--<ng-container matColumnDef="idServicioCheckin">
-      <th mat-header-cell *matHeaderCellDef>idServicioCheckin</th>
-      <td mat-cell *matCellDef="let element"> {{element.idServicioCheckin}} </td>
-    </ng-container>-->
+        <td>{{t.fservicio}}</td>
+        <td>{{t.cliente}}</td>
+        <td>{{t.ruta}}</td>
+        <td>{{t.turno}}</td>
+        <td>{{t.tipo}}</td>
+        <td>{{t.unidad}}</td>
+      </tr>
 
-    <ng-container matColumnDef="fservicio">
-      <th mat-header-cell *matHeaderCellDef> fservicio </th>
-      <td mat-cell *matCellDef="let element"> {{element.fservicio}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="cliente">
-      <th mat-header-cell *matHeaderCellDef> cliente </th>
-      <td mat-cell *matCellDef="let element"> {{element.cliente}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="ruta">
-      <th mat-header-cell *matHeaderCellDef> ruta </th>
-      <td mat-cell *matCellDef="let element"> {{element.ruta}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="turno">
-      <th mat-header-cell *matHeaderCellDef> turno </th>
-      <td mat-cell *matCellDef="let element"> {{element.turno}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="tipo">
-      <th mat-header-cell *matHeaderCellDef> tipo </th>
-      <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="unidad">
-      <th mat-header-cell *matHeaderCellDef> unidad </th>
-      <td mat-cell *matCellDef="let element"> {{element.unidad}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+      </tbody>
+    </table>
 </div>
+
+
+
+
+

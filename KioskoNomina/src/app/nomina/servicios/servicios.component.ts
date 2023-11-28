@@ -8,7 +8,6 @@ import { ServiciosCheckinModule } from '../../models/servicios-checkin/servicios
 })
 export class ServiciosComponent implements OnInit {
   @Input() serviciosList: ServiciosCheckinModule[] = [];
-  displayedColumns = ['fservicio', 'cliente', 'ruta', 'turno', 'tipo', 'unidad'];
 
   constructor() { }
 

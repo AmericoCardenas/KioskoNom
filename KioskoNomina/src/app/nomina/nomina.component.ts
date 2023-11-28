@@ -24,7 +24,7 @@ import { DatePipe } from '@angular/common';
 
 export class NominaComponent implements OnInit {
   list_trabajador: TrabajadorModule[] = [];
-
+  breakpoint?: number;
   list_nomgen: NomgenCheckinModule[] = [{
     idNomCheckin: "", totServ: 0, totSencillos: 0, totRedondos: 0,
     totTaxis:0,totEsp:0,salario:0,deducciones:0,bonos:0,total:0
@@ -70,16 +70,13 @@ export class NominaComponent implements OnInit {
     localStorage.setItem('list_trabajador', JSON.stringify(this.list_trabajador));
     console.log(this.list_trabajador);
 
-
+    this.breakpoint = (window.innerWidth <= 400) ? 1 : 6;
 
 
   }
 
   OnFechaAccept() {
     this.empleado = (<HTMLInputElement>document.getElementById("empleado")).value;
-    console.log(this.fechainicial);
-    console.log(this.fechafinal);
-    console.log(this.empleado);
 
     if (this.fechainicial > this.fechafinal) {
       alert("la fecha inicial no puede ser mayor a la fecha final");
@@ -152,7 +149,7 @@ export class NominaComponent implements OnInit {
      autoTable(doc, {
        head: [['Fecha Inicial', 'Fecha Final']],
        body: [
-         [this.datePipe.transform(new Date(this.fechainicial), 'dd-MM-yyyy'),this.datePipe.transform(new Date(this.fechafinal), 'dd-MM-yyyy')],
+         [this.fechainicial,this.fechafinal],
        ],
      })
      autoTable(doc, { html: '#tb_empleado' })
@@ -163,5 +160,6 @@ export class NominaComponent implements OnInit {
      autoTable(doc, { html: '#tb_deducciones' })
      doc.save(this.empleado+'.pdf')
   }
-  
+
+
 }

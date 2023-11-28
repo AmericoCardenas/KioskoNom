@@ -1,30 +1,20 @@
-<table mat-table [dataSource]="bonosList" class="mat-elevation-z8 demo-table" id="tb_bonos">
 
-  <!--<ng-container matColumnDef="idBonoCheckin">
-    <th mat-header-cell *matHeaderCellDef>idBonoCheckin</th>
-    <td mat-cell *matCellDef="let element"> {{element.idBonoCheckin}} </td>
-  </ng-container>-->
+  <div class="table-responsive">
+    <table class="table table-bordered table align-middle" id="tb_bonos">
+      <thead>
+        <tr>
+          <th scope="col">Bono</th>
+          <th scope="col">Total</th>
+          <th scope="col">Obs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of bonosList">
+          <td>{{t.bono}}</td>
+          <td>{{t.total}}</td>
+          <td>{{t.observaciones}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <ng-container matColumnDef="bono">
-    <th mat-header-cell *matHeaderCellDef> bono </th>
-    <td mat-cell *matCellDef="let element"> {{element.bono}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="total">
-    <th mat-header-cell *matHeaderCellDef> total </th>
-    <td mat-cell *matCellDef="let element"> {{element.total}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="observaciones">
-    <th mat-header-cell *matHeaderCellDef> observaciones </th>
-    <td mat-cell *matCellDef="let element"> {{element.observaciones}} </td>
-  </ng-container>
-
-  <!--<ng-container matColumnDef="fecha">
-    <th mat-header-cell *matHeaderCellDef> fecha </th>
-    <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
-  </ng-container>-->
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>

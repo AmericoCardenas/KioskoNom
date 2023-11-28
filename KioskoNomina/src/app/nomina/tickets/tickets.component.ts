@@ -8,7 +8,6 @@ import { TicketsCheckinModule } from '../../models/tickets-checkin/tickets-check
 })
 export class TicketsComponent implements OnInit {
   @Input() ticketsList: TicketsCheckinModule[] = [];
-  displayedColumns = [ 'unidad', 'litros', 'rendReq', 'kmGpsAnt', 'kmGps', 'kmGpsRec', 'rendGps'];
 
   constructor() { }
 

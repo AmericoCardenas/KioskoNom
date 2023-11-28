@@ -1,46 +1,23 @@
-<table mat-table [dataSource]="ticketsList" class="mat-elevation-z8 demo-table" id="tb_tickets">
 
-  <!--<ng-container matColumnDef="idTicketCheckin">
-    <th mat-header-cell *matHeaderCellDef>idTicketCheckin</th>
-    <td mat-cell *matCellDef="let element"> {{element.idTicketCheckin}} </td>
-  </ng-container>-->
-
-  <ng-container matColumnDef="unidad">
-    <th mat-header-cell *matHeaderCellDef> unidad </th>
-    <td mat-cell *matCellDef="let element"> {{element.unidad}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="litros">
-    <th mat-header-cell *matHeaderCellDef> litros </th>
-    <td mat-cell *matCellDef="let element"> {{element.litros}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="rendReq">
-    <th mat-header-cell *matHeaderCellDef> rendReq </th>
-    <td mat-cell *matCellDef="let element"> {{element.rendReq}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="kmGpsAnt">
-    <th mat-header-cell *matHeaderCellDef> kmGpsAnt </th>
-    <td mat-cell *matCellDef="let element"> {{element.kmGpsAnt}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="kmGps">
-    <th mat-header-cell *matHeaderCellDef> kmGps </th>
-    <td mat-cell *matCellDef="let element"> {{element.kmGps}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="kmGpsRec">
-    <th mat-header-cell *matHeaderCellDef> kmGpsRec </th>
-    <td mat-cell *matCellDef="let element"> {{element.kmGpsRec}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="rendGps">
-    <th mat-header-cell *matHeaderCellDef> rendGps </th>
-    <td mat-cell *matCellDef="let element"> {{element.rendGps}} </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
+  <div class="table-responsive">
+    <table class="table table-bordered table align-middle" id="tb_tickets">
+      <thead>
+        <tr>
+          <th scope="col">Unidad</th>
+          <th scope="col">Lts</th>
+          <th scope="col">RendReq</th>
+          <th scope="col">KmRec</th>
+          <th scope="col">Rend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of ticketsList">
+          <td>{{t.unidad}}</td>
+          <td>{{t.litros}}</td>
+          <td>{{t.rendReq}}</td>
+          <td>{{t.kmGpsRec}}</td>
+          <td>{{t.rendGps}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

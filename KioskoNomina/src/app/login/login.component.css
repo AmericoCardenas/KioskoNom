@@ -1,17 +1,11 @@
-mat-card{
-    background-color:white !important;
-    color:black !important;
+@media only screen and (max-width: 600px) {
+  .row {
+    margin-top: 20%;
+  }
 }
 
-input{
-    color:black !important;
-}
-
-mat-label {
-  color: black !important;
-}
-
-
-.btnlogin{
-    background-color:dodgerblue !important;
+@media only screen and (min-width: 760px) {
+  .row {
+    margin-top: 10%;
+  }
 }

@@ -1,50 +1,5 @@
-.demo-table {
-  width: 100%;
-}
-
-.mat-column-idDeduccionCheckin {
-  width: 50px;
-  border-right: 1px solid currentColor;
-  padding-right: 24px;
-  text-align: center;
-  border-color: black !important;
-}
-
-.mat-column-deduccion {
-  width: 150px;
-  border-right: 1px solid currentColor;
-  text-align: center;
-  border-color: black !important;
-}
-
-.mat-column-total {
-  width: 70px;
-  border-right: 1px solid currentColor;
-  text-align: center;
-  border-color: black !important;
-}
-
-.mat-column-observaciones {
-  width: 150px;
-  border-right: 1px solid currentColor;
-  text-align: center;
-  border-color: black !important;
-}
-
-.mat-column-fecha {
-  width: 150px;
-  border-right: 1px solid currentColor;
-  text-align: center;
-  border-color: black !important;
-}
-
-.mat-header-cell {
+th {
   background-color: dodgerblue !important;
   color: white !important;
-
-}
-
-.mat-cell {
-  background-color: white !important;
-  color: black !important;
+  font-weight: normal !important;
 }
